@@ -1,5 +1,10 @@
 apt update
 echo Packages updated.
+ufw default deny incoming
+ufw allow 80
+ufw allow 443
+ufw allow 22
+ufw enable
 apt install apache2
 echo Apache2 Package Installed.
 wget https://raw.githubusercontent.com/Swivro/ddos-protection-script/main/antiddos-debian.sh && chmod +x antiddos-debian.sh && ./antiddos-debian.sh
