@@ -3,5 +3,5 @@ Hosting a website on apache; with enhanced security features. Do not use this sc
 
 Run the script
 ```
-wget https://raw.githubusercontent.com/kasperireland/apache-securely/main/debian.sh -O deb.sh && chmod +x deb.sh && ./deb.sh
+wget https://raw.githubusercontent.com/kasperireland/apache-securely/main/apache-deb.sh -O deb.sh && chmod +x deb.sh && ./deb.sh
 ```
