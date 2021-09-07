@@ -7,9 +7,10 @@ ufw allow 443
 ufw allow 22
 ufw enable
 echo UFW Firewall Configuration Applied.
-sleep 2
+sleep 1
 apt install apache2
 echo Apache2 Installed.
+sleep 1
 apt install iptables-persistent
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DROP
