@@ -8,9 +8,6 @@ ufw allow 22
 ufw enable
 echo UFW Firewall Configuration Applied.
 sleep 1
-apt install apache2
-echo Apache2 Installed.
-sleep 1
 apt install iptables-persistent
 /sbin/iptables -t mangle -A PREROUTING -m conntrack --ctstate INVALID -j DROP
 /sbin/iptables -t mangle -A PREROUTING -p tcp --tcp-flags FIN,SYN,RST,PSH,ACK,URG NONE -j DROP
@@ -50,7 +47,4 @@ apt install iptables-persistent
 /sbin/iptables -A INPUT -p tcp --dport ssh -m conntrack --ctstate NEW -m recent --update --seconds 60 --hitcount 10 -j DROP
 echo Anti DDoS Configuration via IpTables Saved.
 echo ~~~~~~~~
-echo You will now configure a TLS/SSL Certificate for your website domain name. This will automatically start in 6 seconds.
-sleep 6
-certbot --apache
 echo Congratulations, you are finished with this script.
