@@ -1,4 +1,4 @@
-# apache-securely
+# securityscript
 a simple script to help prevent DDoS attacks from affecting you.
 
 Run the script
